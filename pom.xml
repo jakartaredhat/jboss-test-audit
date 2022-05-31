@@ -3,7 +3,7 @@
 
     <groupId>org.jboss.test-audit</groupId>
     <artifactId>jboss-test-audit-parent</artifactId>
-    <version>2.0.1-SNAPSHOT</version>
+    <version>2.0.1.Final</version>
     <packaging>pom</packaging>
     <name>Test Audit Utils Parent</name>
 
@@ -77,15 +77,10 @@
 
     <distributionManagement>
         <repository>
-            <id>jboss-releases-repository</id>
-            <name>JBoss Releases Repository</name>
-            <url>${jboss.releases.repo.url}</url>
+            <id>github</id>
+            <name>GitHub jakartaredhat Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/jakartaredhat/maven-packages</url>
         </repository>
-        <snapshotRepository>
-            <id>jboss-snapshots-repository</id>
-            <name>JBoss Snapshots Repository</name>
-            <url>${jboss.snapshots.repo.url}</url>
-        </snapshotRepository>
     </distributionManagement>
 
     <build>
