@@ -55,15 +55,15 @@
         <!-- ***************** -->
         <!-- Repository Deployment URLs -->
         <!-- ***************** -->
-        <jboss.releases.repo.url>https://repository.jboss.org/nexus/service/local/staging/deploy/maven2/</jboss.releases.repo.url>
-        <jboss.snapshots.repo.url>https://repository.jboss.org/nexus/content/repositories/snapshots/</jboss.snapshots.repo.url>
+        <jboss.releases.repo.url>https://maven.pkg.github.com/jakartaredhat/maven-packages/</jboss.releases.repo.url>
+        <jboss.snapshots.repo.url>https://maven.pkg.github.com/jakartaredhat/maven-snapshots/</jboss.snapshots.repo.url>
     </properties>
 
     <repositories>
         <repository>
-            <id>repository.jboss.org</id>
-            <name>JBoss Repository</name>
-            <url>http://repository.jboss.org/maven2</url>
+            <id>jakartaredhat</id>
+            <name>Red Hat Jakarta Maven Repository</name>
+            <url>${jboss.releases.repo.url}</url>
         </repository>
     </repositories>
 
@@ -79,8 +79,14 @@
         <repository>
             <id>github</id>
             <name>GitHub jakartaredhat Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/jakartaredhat/maven-packages</url>
+            <url>${jboss.releases.repo.url}</url>
         </repository>
+        <snapshotRepository>
+            <id>github-snapshots</id>
+            <name>GitHub jakartaredhat SNAPSHOT Apache Maven Packages</name>
+            <url>${jboss.snapshots.repo.url}</url>
+        </snapshotRepository>
+
     </distributionManagement>
 
     <build>
